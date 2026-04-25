@@ -1,0 +1,175 @@
+{
+  "target": "player",
+  "mode": "hurt",
+  "prompt": "",
+  "role": "",
+  "input": "/Users/chenshipeng/Documents/project/codex-project/thinking/KittyBrawl/assets/characters/player/combat/hurt/raw-sheet.png",
+  "threshold": 70,
+  "edge_threshold": 95,
+  "duration": 160,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 192,
+  "fit_scale": 0.88,
+  "trim_border": 8,
+  "edge_clean_depth": 0,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "largest",
+  "component_padding": 8,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "hurt-1",
+    "hurt-2",
+    "hurt-3",
+    "hurt-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 12,
+      "selected_component_area": 62281,
+      "selected_component_bbox": [
+        178,
+        167,
+        511,
+        486
+      ],
+      "crop_bbox": [
+        170,
+        159,
+        519,
+        494
+      ],
+      "edge_touch": false,
+      "output_size": [
+        147,
+        141
+      ],
+      "paste_position": [
+        22,
+        40
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 2,
+      "selected_component_area": 67109,
+      "selected_component_bbox": [
+        77,
+        157,
+        454,
+        488
+      ],
+      "crop_bbox": [
+        69,
+        149,
+        462,
+        496
+      ],
+      "edge_touch": false,
+      "output_size": [
+        166,
+        146
+      ],
+      "paste_position": [
+        13,
+        35
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 2,
+      "selected_component_area": 61076,
+      "selected_component_bbox": [
+        136,
+        169,
+        512,
+        447
+      ],
+      "crop_bbox": [
+        128,
+        161,
+        520,
+        455
+      ],
+      "edge_touch": false,
+      "output_size": [
+        165,
+        124
+      ],
+      "paste_position": [
+        13,
+        57
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 63850,
+      "selected_component_bbox": [
+        73,
+        123,
+        457,
+        447
+      ],
+      "crop_bbox": [
+        65,
+        115,
+        465,
+        455
+      ],
+      "edge_touch": false,
+      "output_size": [
+        168,
+        143
+      ],
+      "paste_position": [
+        12,
+        38
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

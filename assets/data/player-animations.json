@@ -1,0 +1,243 @@
+{
+  "animations": {
+    "idle": {
+      "src": "assets/characters/player/movement/idle/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 4,
+      "fps": 5,
+      "loop": true,
+      "scale": 1.7,
+      "anchorX": 64,
+      "anchorY": 119
+    },
+    "run": {
+      "src": "assets/characters/player/movement/run/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 6,
+      "fps": 10,
+      "loop": true,
+      "scale": 1.7,
+      "anchorX": 64,
+      "anchorY": 119
+    },
+    "jump_fall": {
+      "src": "assets/characters/player/movement/jump_fall/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "scale": 1.7,
+      "anchorX": 64,
+      "anchorY": 119,
+      "frameByVelocity": true
+    },
+    "attack_01": {
+      "src": "assets/characters/player/combat/attack_01/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 3,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "scale": 1.45,
+      "anchorX": 96,
+      "anchorY": 181
+    },
+    "hurt": {
+      "src": "assets/characters/player/combat/hurt/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 10,
+      "loop": false,
+      "scale": 1.35,
+      "anchorX": 96,
+      "anchorY": 181
+    },
+    "death": {
+      "src": "assets/characters/player/combat/death/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 3,
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "scale": 1.35,
+      "anchorX": 96,
+      "anchorY": 181
+    },
+    "super_activation": {
+      "src": "assets/characters/player/super/super_activation/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "scale": 1.45,
+      "anchorX": 96,
+      "anchorY": 177
+    },
+    "super_attack": {
+      "src": "assets/characters/player/super/super_attack/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 3,
+      "frames": 9,
+      "fps": 11,
+      "loop": false,
+      "scale": 1.45,
+      "anchorX": 96,
+      "anchorY": 177
+    }
+  },
+  "effects": {
+    "slash_fx": {
+      "src": "assets/effects/player/slash_fx/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 4,
+      "frames": 4,
+      "fps": 18,
+      "scale": 1.1,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "hit_spark": {
+      "src": "assets/effects/player/hit_spark/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 18,
+      "scale": 0.9,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "super_impact_fx": {
+      "src": "assets/effects/player/super_impact_fx/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 14,
+      "scale": 1.6,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "rat_hit_spark": {
+      "src": "assets/effects/enemies/rat_hit_spark/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 18,
+      "scale": 0.72,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "rat_death_puff": {
+      "src": "assets/effects/enemies/rat_death_puff/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 13,
+      "scale": 0.92,
+      "anchorX": 96,
+      "anchorY": 96
+    }
+  },
+  "enemies": {
+    "rat": {
+      "maxHealth": 2,
+      "speed": 88,
+      "attackRange": 76,
+      "attackCooldown": 1.35,
+      "attackDamage": 0.14,
+      "bodyWidth": 78,
+      "bodyHeight": 78,
+      "bodyOffsetY": -44,
+      "animations": {
+        "idle": {
+          "src": "assets/characters/enemies/rat/idle/sheet-transparent.png",
+          "frameWidth": 128,
+          "frameHeight": 128,
+          "cols": 2,
+          "frames": 4,
+          "fps": 5,
+          "loop": true,
+          "scale": 1.34,
+          "anchorX": 64,
+          "anchorY": 116
+        },
+        "walk": {
+          "src": "assets/characters/enemies/rat/walk/sheet-transparent.png",
+          "frameWidth": 128,
+          "frameHeight": 128,
+          "cols": 3,
+          "frames": 6,
+          "fps": 9,
+          "loop": true,
+          "scale": 1.34,
+          "anchorX": 64,
+          "anchorY": 116
+        },
+        "attack": {
+          "src": "assets/characters/enemies/rat/attack/sheet-transparent.png",
+          "frameWidth": 192,
+          "frameHeight": 192,
+          "cols": 3,
+          "frames": 6,
+          "fps": 12,
+          "loop": false,
+          "scale": 1.08,
+          "anchorX": 96,
+          "anchorY": 171
+        },
+        "hurt": {
+          "src": "assets/characters/enemies/rat/hurt/sheet-transparent.png",
+          "frameWidth": 192,
+          "frameHeight": 192,
+          "cols": 2,
+          "frames": 4,
+          "fps": 11,
+          "loop": false,
+          "scale": 1.08,
+          "anchorX": 96,
+          "anchorY": 171
+        },
+        "death": {
+          "src": "assets/characters/enemies/rat/death/sheet-transparent.png",
+          "frameWidth": 192,
+          "frameHeight": 192,
+          "cols": 3,
+          "frames": 6,
+          "fps": 9,
+          "loop": false,
+          "scale": 1.08,
+          "anchorX": 96,
+          "anchorY": 171
+        }
+      }
+    }
+  },
+  "level": {
+    "background": "assets/levels/backgrounds/rat_den_bg.png",
+    "tiles": {
+      "groundCenter": "assets/levels/tilesets/rat_den_tileset_processed/tiles/01_ground_center.png",
+      "floatingPlatform": "assets/levels/tilesets/rat_den_tileset_processed/tiles/07_floating_platform_center.png",
+      "slimeWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/12_slime_wall.png"
+    }
+  },
+  "backgrounds": {
+    "super": "assets/effects/player/super_background_plate/background.png"
+  }
+}

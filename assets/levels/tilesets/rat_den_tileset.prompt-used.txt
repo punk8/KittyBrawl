@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: side-scrolling platformer tileset
+Primary request: create a compact ground and platform tileset for the first Kitty Brawl combat prototype.
+Scene/backdrop: underground rat den sewer ruin floor tiles made of cracked damp stone, old brick, dark mud, bits of straw, tiny bone chips, and muted purple crystal flecks.
+Subject: exactly 16 square tiles arranged in a clean 4x4 grid. Each tile is a separate square game tile.
+Style/medium: 16-bit SNES and Sega Genesis era side-scrolling action-platformer pixel art, compatible with the existing cat warrior hero and rat bandit enemy sprites, crisp dark outlines, limited earthy palette, high-contrast hand-authored pixel clusters, dark fantasy tribal tone, readable gameplay silhouettes, no painterly blur, no modern vector art, no 3D render, no photorealism.
+Composition/framing: one tileset image, exact 4 columns by 4 rows, all cells equal size, no perspective camera, orthographic side-view platformer tile art. Each tile fills its cell cleanly. Include top surface, underground fill, left edge, right edge, inner corner, outer corner, single platform, platform left cap, platform right cap, wall face, cracked variant, mossy/slimy variant, broken edge variant, small decorative stone, embedded bone detail, and dark filler tile.
+Lighting/mood: dim sewer stone palette, muted brown, gray-green, black-brown shadow, tiny purple-gold accents.
+Constraints: no text, no numbers, no labels, no UI, no characters, no enemies, no weapons, no decorative frame, no isometric perspective. Make tiles visually connect horizontally when repeated. Keep tile edges clean and readable.
+Avoid: random illustration collage, uneven tile sizes, diagonal camera angle, photoreal textures, smooth gradients, bright candy colors.
+Production target: square 4x4 tileset image with a clear, even grid, preferably 1024x1024 or another square size divisible by 4, with no labels or border text.

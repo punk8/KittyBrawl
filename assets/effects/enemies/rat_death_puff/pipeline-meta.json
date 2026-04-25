@@ -1,0 +1,155 @@
+{
+  "target": "asset",
+  "mode": "rat_death_puff",
+  "prompt": "exactly 4 equal cells in a 2x2 grid, 16-bit pixel art small enemy defeat puff for a side-view action platformer, dusty gray-brown smoke burst with a few pale gold impact flecks and tiny dark cloth scraps, compact circular silhouette, no character body, no weapon, no UI, no text. Animation frames show first dust pop, expanding smoke puff, peak dusty burst, and fading smoke. Same effect scale in every frame, centered in each cell, detached scraps must stay tightly grouped, leave clear magenta margin on all four sides, no smoke, fleck, or scrap may cross a cell edge, solid flat #FF00FF magenta background, no gradients, no texture, no shadows, no borders or frames between cells. Style matches the rat bandit concept: dark fantasy tribal 16-bit SNES and Sega Genesis era pixel art.",
+  "role": "",
+  "input": "/Users/chenshipeng/.codex/generated_images/019dc530-ab8f-7c83-809d-2118d716b7f7/ig_0915eb4211aad5ea0169ecd9d712148191ba3f303475a1312c.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 110,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 192,
+  "fit_scale": 0.82,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 1,
+  "frame_labels": [
+    "rat_death_puff-1",
+    "rat_death_puff-2",
+    "rat_death_puff-3",
+    "rat_death_puff-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "all",
+      "component_count": 9,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        197,
+        279,
+        423,
+        467
+      ],
+      "edge_touch": false,
+      "output_size": [
+        80,
+        67
+      ],
+      "paste_position": [
+        56,
+        62
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "all",
+      "component_count": 11,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        105,
+        189,
+        446,
+        480
+      ],
+      "edge_touch": false,
+      "output_size": [
+        121,
+        103
+      ],
+      "paste_position": [
+        35,
+        44
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "all",
+      "component_count": 24,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        108,
+        71,
+        549,
+        429
+      ],
+      "edge_touch": false,
+      "output_size": [
+        157,
+        127
+      ],
+      "paste_position": [
+        17,
+        32
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "all",
+      "component_count": 25,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        133,
+        135,
+        426,
+        418
+      ],
+      "edge_touch": false,
+      "output_size": [
+        104,
+        101
+      ],
+      "paste_position": [
+        44,
+        45
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

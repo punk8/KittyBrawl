@@ -1,0 +1,471 @@
+{
+  "source": "assets/levels/tilesets/rat_den_tileset_magenta_raw.png",
+  "source_width": 1252,
+  "source_height": 1252,
+  "source_crop": [
+    0,
+    0,
+    1252,
+    1252
+  ],
+  "rows": 4,
+  "cols": 4,
+  "tile_width": 313,
+  "tile_height": 313,
+  "key_color": "#FF00FF",
+  "threshold": 128.0,
+  "edge_fringe_threshold": 180.0,
+  "edge_fringe_passes": 1,
+  "transparent_sheet": "tileset-transparent.png",
+  "checker_preview": "tileset-transparent-checker.png",
+  "tiles": [
+    {
+      "index": 1,
+      "row": 0,
+      "col": 0,
+      "name": "ground_center",
+      "collision": "solid",
+      "notes": "Default cracked stone floor with dirt fill.",
+      "file": "tiles/01_ground_center.png",
+      "stats": {
+        "transparent_ratio": 0.5054,
+        "opaque_ratio": 0.4946,
+        "visible_ratio": 0.4946,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          67,
+          97,
+          295,
+          313
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.7029,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 1,
+      "name": "floating_platform_short",
+      "collision": "platform",
+      "notes": "Short floating platform segment.",
+      "file": "tiles/02_floating_platform_short.png",
+      "stats": {
+        "transparent_ratio": 0.7359,
+        "opaque_ratio": 0.2641,
+        "visible_ratio": 0.2641,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          43,
+          153,
+          287,
+          279
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 2,
+      "name": "ground_left_corner",
+      "collision": "solid",
+      "notes": "Left ledge or vertical ground corner.",
+      "file": "tiles/03_ground_left_corner.png",
+      "stats": {
+        "transparent_ratio": 0.6037,
+        "opaque_ratio": 0.3963,
+        "visible_ratio": 0.3963,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          37,
+          97,
+          255,
+          313
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.4409,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 4,
+      "row": 0,
+      "col": 3,
+      "name": "ground_right_corner",
+      "collision": "solid",
+      "notes": "Right ledge or vertical ground corner.",
+      "file": "tiles/04_ground_right_corner.png",
+      "stats": {
+        "transparent_ratio": 0.5995,
+        "opaque_ratio": 0.4005,
+        "visible_ratio": 0.4005,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          16,
+          97,
+          241,
+          313
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.3866,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 0,
+      "name": "left_wall_corner",
+      "collision": "solid",
+      "notes": "Left wall and floor corner with dirt fill.",
+      "file": "tiles/05_left_wall_corner.png",
+      "stats": {
+        "transparent_ratio": 0.5789,
+        "opaque_ratio": 0.4211,
+        "visible_ratio": 0.4211,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          71,
+          0,
+          298,
+          302
+        ],
+        "edge_occupancy": {
+          "top": 0.7029,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 1,
+      "name": "right_wall_corner",
+      "collision": "solid",
+      "notes": "Right wall and floor corner with dirt fill.",
+      "file": "tiles/06_right_wall_corner.png",
+      "stats": {
+        "transparent_ratio": 0.6064,
+        "opaque_ratio": 0.3936,
+        "visible_ratio": 0.3936,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          50,
+          85,
+          267,
+          302
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 2,
+      "name": "floating_platform_center",
+      "collision": "platform",
+      "notes": "Floating platform center segment.",
+      "file": "tiles/07_floating_platform_center.png",
+      "stats": {
+        "transparent_ratio": 0.7374,
+        "opaque_ratio": 0.2626,
+        "visible_ratio": 0.2626,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          19,
+          0,
+          255,
+          258
+        ],
+        "edge_occupancy": {
+          "top": 0.4377,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 8,
+      "row": 1,
+      "col": 3,
+      "name": "floating_platform_variant",
+      "collision": "platform",
+      "notes": "Floating platform variant with drips.",
+      "file": "tiles/08_floating_platform_variant.png",
+      "stats": {
+        "transparent_ratio": 0.7378,
+        "opaque_ratio": 0.2622,
+        "visible_ratio": 0.2622,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          4,
+          0,
+          245,
+          266
+        ],
+        "edge_occupancy": {
+          "top": 0.3834,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "col": 0,
+      "name": "stone_wall",
+      "collision": "solid",
+      "notes": "Plain stone wall face.",
+      "file": "tiles/09_stone_wall.png",
+      "stats": {
+        "transparent_ratio": 0.5496,
+        "opaque_ratio": 0.4504,
+        "visible_ratio": 0.4504,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          74,
+          51,
+          289,
+          261
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "col": 1,
+      "name": "cracked_wall",
+      "collision": "solid",
+      "notes": "Cracked stone wall face with small crystal.",
+      "file": "tiles/10_cracked_wall.png",
+      "stats": {
+        "transparent_ratio": 0.5514,
+        "opaque_ratio": 0.4486,
+        "visible_ratio": 0.4486,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          56,
+          51,
+          269,
+          261
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "col": 2,
+      "name": "dirt_bone_fill",
+      "collision": "solid",
+      "notes": "Underground dirt/rubble fill with bone details.",
+      "file": "tiles/11_dirt_bone_fill.png",
+      "stats": {
+        "transparent_ratio": 0.5451,
+        "opaque_ratio": 0.4549,
+        "visible_ratio": 0.4549,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          38,
+          51,
+          255,
+          261
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 12,
+      "row": 2,
+      "col": 3,
+      "name": "slime_wall",
+      "collision": "solid",
+      "notes": "Mossy or slimy wall face.",
+      "file": "tiles/12_slime_wall.png",
+      "stats": {
+        "transparent_ratio": 0.531,
+        "opaque_ratio": 0.469,
+        "visible_ratio": 0.469,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          18,
+          51,
+          241,
+          261
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "col": 0,
+      "name": "crystal_wall",
+      "collision": "solid",
+      "notes": "Stone wall with purple crystal cluster.",
+      "file": "tiles/13_crystal_wall.png",
+      "stats": {
+        "transparent_ratio": 0.5434,
+        "opaque_ratio": 0.4566,
+        "visible_ratio": 0.4566,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          74,
+          10,
+          289,
+          221
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "col": 1,
+      "name": "bone_skull_fill",
+      "collision": "solid",
+      "notes": "Dirt fill with bones and skull.",
+      "file": "tiles/14_bone_skull_fill.png",
+      "stats": {
+        "transparent_ratio": 0.5472,
+        "opaque_ratio": 0.4528,
+        "visible_ratio": 0.4528,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          57,
+          10,
+          271,
+          221
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "col": 2,
+      "name": "crystal_rock_fill",
+      "collision": "solid",
+      "notes": "Rocky fill with embedded purple crystals.",
+      "file": "tiles/15_crystal_rock_fill.png",
+      "stats": {
+        "transparent_ratio": 0.5435,
+        "opaque_ratio": 0.4565,
+        "visible_ratio": 0.4565,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          38,
+          10,
+          253,
+          221
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    },
+    {
+      "index": 16,
+      "row": 3,
+      "col": 3,
+      "name": "dark_stone_fill",
+      "collision": "solid",
+      "notes": "Dark repeatable stone or dirt fill.",
+      "file": "tiles/16_dark_stone_fill.png",
+      "stats": {
+        "transparent_ratio": 0.5266,
+        "opaque_ratio": 0.4734,
+        "visible_ratio": 0.4734,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "bbox": [
+          16,
+          10,
+          239,
+          221
+        ],
+        "edge_occupancy": {
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "left": 0.0
+        }
+      }
+    }
+  ]
+}

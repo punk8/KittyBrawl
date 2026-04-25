@@ -1,0 +1,11 @@
+Create a 2D pixel-art sprite sheet for a controllable player character, exactly 2 columns by 2 rows, 4 equal cells total, side-view action-platformer perspective, facing right in every frame.
+
+Use the provided reference image as the exact character identity: stout gray-brown tabby cat warrior hero, white muzzle, white chest, white paws, golden eyes, compact chibi fantasy proportions, ragged dark brown and black cloak, leather wraps, tribal belt with one small round gold talisman, striped tail, holding a short gnarled wooden staff weapon with a dark purple crystal head.
+
+Animation: idle loop. Frame 1 neutral stance with both feet planted and staff held across the body. Frame 2 subtle breathing lift, cloak and tail slightly raised. Frame 3 weight shift with tiny head and shoulder motion, staff still controlled. Frame 4 returns toward neutral for a clean loop. Keep the motion small and readable, like a 1990s SNES / Sega Genesis action-platformer hero idle.
+
+Art style: 16-bit SNES and Sega Genesis era pixel art, crisp dark outline, limited color palette, high-contrast hand-authored pixel clusters, no painterly blur, no anti-aliased smooth illustration, readable at small game scale.
+
+Consistency and containment: the same cat identity, same costume, same staff, same silhouette scale, and same bounding box in all 4 frames. Feet / lowest point should align consistently for a game engine anchor. The entire subject must fit fully inside each cell. Leave solid magenta margin on all four sides. No body part, cloak edge, staff tip, tail tip, effect, or shadow may cross a cell edge. No floating detached effects.
+
+Background and layout: the background must be 100% solid flat #FF00FF magenta only, no gradients, no checkerboard, no shadows on the background, no borders, no frames between cells, no labels, no UI, no text.

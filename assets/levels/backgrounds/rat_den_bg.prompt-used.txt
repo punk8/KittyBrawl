@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: side-scrolling game background
+Primary request: create a single static background for the first Kitty Brawl combat prototype.
+Scene/backdrop: underground rat den sewer ruin, damp stone tunnel, cracked brick archways, distant drain pipes, old wooden supports, small bone charms and cloth scraps, faint purple crystal glow in the distance, shallow dark water channels far behind the playable floor area.
+Subject: environment only, no characters, no enemies, no creatures.
+Style/medium: 16-bit SNES and Sega Genesis era side-scrolling action-platformer pixel art, compatible with the existing cat warrior hero and rat bandit enemy sprites, crisp dark outlines, limited earthy palette, high-contrast hand-authored pixel clusters, dark fantasy tribal tone, readable gameplay silhouettes, no painterly blur, no modern vector art, no 3D render, no photorealism.
+Composition/framing: wide 16:9 side-view game background, designed for a 960x540 canvas, horizon and detailed scenery stay in the upper 70 percent, lower 30 percent kept visually calm and darker so foreground floor tiles and characters read clearly. Leave a subtle hint of horizontal scrolling depth, but this is one complete background plate.
+Lighting/mood: moody underground ambience, cool green-gray shadows, muted brown stone, small purple-gold highlights, not too bright, not too busy.
+Constraints: no text, no UI, no logo, no watermark, no characters, no foreground platform tiles, no hard black empty areas, no perspective floor plane that conflicts with side-view gameplay.
+Avoid: clean sci-fi sewer, cute cartoon style, soft airbrush, heavy blur, modern fantasy illustration, realistic painting.

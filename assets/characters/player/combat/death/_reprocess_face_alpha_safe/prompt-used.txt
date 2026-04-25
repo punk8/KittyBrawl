@@ -1,0 +1,19 @@
+Use the provided cat warrior reference image as the exact identity reference.
+
+Create a game-ready 16-bit side-view pixel art sprite sheet for the KittyBrawl player hero.
+Sheet layout: exactly 2 rows by 3 columns, exactly 6 equal cells, no borders, no grid lines, no text.
+
+Character identity must stay consistent in every frame: stout gray-brown tabby cat warrior hero, white muzzle, white chest, white paws, golden eyes, compact chibi fantasy proportions, ragged dark brown and black cloak, leather wraps, tribal belt with small round talisman, striped tail, holding a short gnarled wooden staff weapon with a dark purple crystal head.
+Style: 1990s SNES and Sega Genesis action-platformer pixel art, crisp dark outline, limited color palette, high-contrast hand-authored pixel clusters, readable at small size, full body visible.
+View and direction: side-view action platformer, all frames facing right.
+
+Animation: compact defeated collapse in place, not a long horizontal sprawl.
+Frame 1: hurt stagger, body leaning back, staff pulled close.
+Frame 2: knees buckle, cloak flares upward, head dips.
+Frame 3: dropping downward into a crouched fall, staff tucked close to the chest, tail curved inside the silhouette.
+Frame 4: ground impact in a compact curled pose, body low but not stretched wide, cloak gathered under the body.
+Frame 5: defeated curled pose, motion settling, staff still touching the paws and body.
+Frame 6: final still defeated curled pose, readable compact silhouette, no extra effects.
+
+Engine constraints: the same character identity, same costume, same palette, and same silhouette scale in all six cells. Keep the whole character filling only about 45% to 55% of each cell, with very large clear magenta gutters between cells. Do not make any frame a long horizontal body; keep the tail, staff, cloak, and paws close to the torso. Use the lowest visible body point or paws as the engine anchor and keep the grounded/floor baseline consistent across frames, even as the character falls. Center each frame inside its own cell. The entire subject must fit fully inside each cell. No ear, tail, cloak, weapon tip, spark, or shadow may cross a cell edge or enter a neighboring cell. Leave thick solid magenta margin on all four sides in every cell. No floating detached effects outside the main silhouette.
+Background: 100% solid flat #FF00FF magenta in every pixel of the background, no gradients, no checkerboard, no shadows, no UI.

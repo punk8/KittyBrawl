@@ -1,0 +1,17 @@
+Use the provided cat warrior reference image as the exact identity reference.
+
+Create a game-ready 16-bit side-view pixel art sprite sheet for the KittyBrawl player hero.
+Sheet layout: exactly 2 rows by 2 columns, exactly 4 equal cells, no borders, no grid lines, no text.
+
+Character identity must stay consistent in every frame: stout gray-brown tabby cat warrior hero, white muzzle, white chest, white paws, golden eyes, compact chibi fantasy proportions, ragged dark brown and black cloak, leather wraps, tribal belt with small round talisman, striped tail, holding a short gnarled wooden staff weapon with a dark purple crystal head.
+Style: 1990s SNES and Sega Genesis action-platformer pixel art, crisp dark outline, limited color palette, high-contrast hand-authored pixel clusters, readable at small size, full body visible.
+View and direction: side-view action platformer, all frames facing right.
+
+Animation: hurt recoil and stagger.
+Frame 1: impact moment, eyes narrowed, torso jerked back slightly, staff pulled close.
+Frame 2: recoil, one paw lifted, cloak flicks forward, body pushed backward but still facing right.
+Frame 3: stagger low, knees bent, tail and cloak settling.
+Frame 4: recovery pose, returning to guarded stance with staff ready.
+
+Engine constraints: the same character identity, same costume, same palette, same silhouette scale, and same foot baseline in all four cells. The entire subject must fit fully inside each cell. No ear, tail, cloak, weapon tip, spark, or shadow may cross a cell edge. Leave solid magenta margin on all four sides in every cell. No floating detached effects outside the main silhouette.
+Background: 100% solid flat #FF00FF magenta in every pixel of the background, no gradients, no checkerboard, no shadows, no UI.

@@ -1,0 +1,155 @@
+{
+  "target": "asset",
+  "mode": "rat_hit_spark",
+  "prompt": "exactly 4 equal cells in a 2x2 grid, 16-bit pixel art small enemy hit spark for a side-view action platformer, pale gold and off-white impact burst with tiny dark purple fragments and muted brown debris pixels, compact readable silhouette, no character, no weapon, no UI, no text. Animation frames show contact spark, small expansion, peak burst, and fading fragments. Same effect scale in every frame, centered in each cell, detached fragments must stay tightly grouped, leave clear magenta margin on all four sides, no spark or fragment may cross a cell edge, solid flat #FF00FF magenta background, no gradients, no texture, no shadows, no borders or frames between cells. Style matches the rat bandit concept: dark fantasy tribal 16-bit SNES and Sega Genesis era pixel art.",
+  "role": "",
+  "input": "/Users/chenshipeng/.codex/generated_images/019dc530-ab8f-7c83-809d-2118d716b7f7/ig_0915eb4211aad5ea0169ecd98e26608191b038ab7b009b9c94.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 90,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 192,
+  "fit_scale": 0.82,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 1,
+  "frame_labels": [
+    "rat_hit_spark-1",
+    "rat_hit_spark-2",
+    "rat_hit_spark-3",
+    "rat_hit_spark-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "all",
+      "component_count": 9,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        188,
+        236,
+        442,
+        475
+      ],
+      "edge_touch": false,
+      "output_size": [
+        99,
+        93
+      ],
+      "paste_position": [
+        46,
+        49
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "all",
+      "component_count": 12,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        103,
+        179,
+        437,
+        506
+      ],
+      "edge_touch": false,
+      "output_size": [
+        130,
+        127
+      ],
+      "paste_position": [
+        31,
+        32
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "all",
+      "component_count": 15,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        128,
+        76,
+        531,
+        443
+      ],
+      "edge_touch": false,
+      "output_size": [
+        157,
+        143
+      ],
+      "paste_position": [
+        17,
+        24
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "all",
+      "component_count": 28,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        103,
+        127,
+        412,
+        425
+      ],
+      "edge_touch": false,
+      "output_size": [
+        120,
+        116
+      ],
+      "paste_position": [
+        36,
+        38
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

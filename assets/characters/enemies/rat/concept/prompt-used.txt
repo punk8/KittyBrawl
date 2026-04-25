@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: game enemy concept sprite for Kitty Brawl
+Input image: the provided cat warrior sprite sheet is the style and scale reference only; do not copy the cat, create a matching enemy.
+Primary request: create one small rat monster enemy design that matches the 1990s 16-bit SNES/Sega Genesis side-scrolling action platformer pixel-art style of the cat warrior.
+Subject: a small hunched gray-brown rat bandit monster, compact chibi fantasy proportions, long thin tail, large rounded ears, sharp yellow eyes, pointed snout, ragged dark cloth hood and scraps, leather wrist wraps, tiny bone/metal dagger or broken spear, nervous but hostile stance, facing right, full body visible.
+Style/medium: crisp 16-bit retro pixel art sprite, strong dark outline, limited color palette, high-contrast hand-authored pixel clusters, readable silhouette, dark fantasy tribal tone, compatible with the cat warrior hero.
+Composition/framing: single full-body side-view idle pose centered with generous padding, no animation sheet, no multiple characters.
+Scene/backdrop: perfectly flat solid #FF00FF magenta chroma-key background, no gradient, no texture, no shadows.
+Constraints: no text, no UI, no border, no labels, no watermark, no floor plane, no cast shadow, keep the whole subject fully inside the image with clear magenta margin on all sides.

@@ -1,0 +1,11 @@
+Create a 2D pixel-art sprite sheet for a controllable player character, exactly 2 columns by 3 rows, 6 equal cells total, side-view action-platformer perspective, facing right in every frame.
+
+Use the provided reference image as the exact character identity: stout gray-brown tabby cat warrior hero, white muzzle, white chest, white paws, golden eyes, compact chibi fantasy proportions, ragged dark brown and black cloak, leather wraps, tribal belt with one small round gold talisman, striped tail, holding a short gnarled wooden staff weapon with a dark purple crystal head.
+
+Animation: jump and fall sequence for a side-view platformer. Frame 1 crouch anticipation with feet planted and staff tucked. Frame 2 launch upward with legs pushing off and cloak snapping down. Frame 3 rising pose with knees tucked slightly and staff held close. Frame 4 apex pose with body compact, tail floating, cloak lifted. Frame 5 falling pose with body angled down, staff forward for balance. Frame 6 pre-landing pose with feet reaching downward. Keep the sequence clean and gameplay-readable, not a flip, like a 1990s SNES / Sega Genesis action-platformer jump.
+
+Art style: 16-bit SNES and Sega Genesis era pixel art, crisp dark outline, limited color palette, high-contrast hand-authored pixel clusters, no painterly blur, no anti-aliased smooth illustration, readable at small game scale.
+
+Consistency and containment: the same cat identity, same costume, same staff, same silhouette scale, and same bounding box in all 6 frames. Use the feet / lowest point as the engine anchor where applicable; within airborne frames keep the character centered with consistent scale. The entire subject must fit fully inside each cell. Leave solid magenta margin on all four sides. No body part, cloak edge, staff tip, tail tip, dust, or shadow may cross a cell edge. No floating detached effects.
+
+Background and layout: the background must be 100% solid flat #FF00FF magenta only, no gradients, no checkerboard, no shadows on the background, no borders, no frames between cells, no labels, no UI, no text.

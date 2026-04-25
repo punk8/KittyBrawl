@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: side-scrolling platformer environment prop sheet
+Primary request: create a small prop sheet for a dark fantasy rat den sewer level.
+Subject: exactly 12 small environment props arranged in a clean 4x3 grid: cracked pipe opening, broken wooden brace, hanging cloth scrap, tiny bone charm bundle, small purple crystal cluster, old crate, muddy rock pile, rat nest straw pile, broken chain, skull fragment, sewer grate, dripping slime patch.
+Style/medium: 16-bit SNES and Sega Genesis era side-scrolling action-platformer pixel art, compatible with the existing cat warrior hero and rat bandit enemy sprites, crisp dark outlines, limited earthy palette, high-contrast hand-authored pixel clusters, dark fantasy tribal tone.
+Composition/framing: exact 4 columns by 3 rows, each prop centered in its cell with clear padding, front-facing or side-view game prop readability.
+Scene/backdrop: perfectly flat solid #00FF00 chroma-key background for background removal. The background must be one uniform color with no shadows, gradients, texture, reflections, floor plane, or lighting variation.
+Constraints: do not use #00FF00 anywhere in the props. No text, no labels, no UI, no characters, no enemies, no watermark.
