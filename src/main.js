@@ -579,7 +579,9 @@ function draw() {
     drawBackdrop();
   }
 
-  drawStage(isSuperMode());
+  if (player.action !== "super_activation") {
+    drawStage(player.action === "super_attack");
+  }
   drawCombatants();
   drawEffects();
 
@@ -615,7 +617,7 @@ function drawSuperBackdrop() {
 
 function drawStage(isSuperStage = false) {
   ctx.save();
-  ctx.globalAlpha = isSuperStage ? 0.7 : 0.82;
+  ctx.globalAlpha = isSuperStage ? 0.22 : 0.82;
   const ground = images.get("tile:groundCenter");
   const wall = images.get("tile:slimeWall");
   const platform = images.get("tile:floatingPlatform");
@@ -624,18 +626,18 @@ function drawStage(isSuperStage = false) {
     ctx.drawImage(ground, x, GROUND_Y - 132, 150, 150);
   }
 
-  ctx.globalAlpha = isSuperStage ? 0.36 : 0.48;
+  ctx.globalAlpha = isSuperStage ? 0.12 : 0.48;
   ctx.drawImage(wall, -28, GROUND_Y - 130, 122, 122);
   ctx.drawImage(wall, WIDTH - 92, GROUND_Y - 130, 122, 122);
 
-  ctx.globalAlpha = (isSuperStage ? 0.4 : 0.56) + Math.sin(stagePulse * 2) * 0.04;
+  ctx.globalAlpha = (isSuperStage ? 0.16 : 0.56) + Math.sin(stagePulse * 2) * 0.04;
   ctx.drawImage(platform, 664, 280, 136, 136);
   ctx.restore();
 
   ctx.save();
-  ctx.fillStyle = "rgba(5, 4, 4, 0.36)";
+  ctx.fillStyle = isSuperStage ? "rgba(5, 4, 4, 0.12)" : "rgba(5, 4, 4, 0.36)";
   ctx.fillRect(0, GROUND_Y + 8, WIDTH, HEIGHT - GROUND_Y);
-  ctx.fillStyle = "rgba(241, 209, 146, 0.16)";
+  ctx.fillStyle = isSuperStage ? "rgba(241, 209, 146, 0.08)" : "rgba(241, 209, 146, 0.16)";
   ctx.fillRect(0, GROUND_Y - 1, WIDTH, 2);
   ctx.restore();
 }
