@@ -1,0 +1,112 @@
+{
+  "id": "rat-den-01",
+  "name": "Rat Den 01",
+  "width": 2400,
+  "tileSize": 112,
+  "groundY": 430,
+  "layers": {
+    "groundFill": {
+      "yOffset": -22,
+      "alpha": 0.32,
+      "superAlpha": 0.08,
+      "tiles": [
+        "darkStoneFill",
+        "stoneWall",
+        "crackedWall",
+        "dirtBoneFill",
+        "slimeWall",
+        "crystalWall",
+        "boneSkullFill",
+        "crystalRockFill",
+        "darkStoneFill",
+        "crackedWall",
+        "dirtBoneFill",
+        "slimeWall",
+        "stoneWall",
+        "boneSkullFill",
+        "crystalRockFill",
+        "darkStoneFill",
+        "slimeWall",
+        "crackedWall",
+        "dirtBoneFill",
+        "crystalWall",
+        "boneSkullFill",
+        "darkStoneFill"
+      ]
+    },
+    "groundTop": {
+      "yOffset": -92,
+      "alpha": 0.68,
+      "superAlpha": 0.18,
+      "tiles": [
+        "leftWallCorner",
+        "groundCenter",
+        "groundLeftCorner",
+        "groundCenter",
+        "groundRightCorner",
+        "groundCenter",
+        "leftWallCorner",
+        "groundCenter",
+        "rightWallCorner",
+        "groundCenter",
+        "groundLeftCorner",
+        "groundCenter",
+        "groundRightCorner",
+        "groundCenter",
+        "leftWallCorner",
+        "groundCenter",
+        "rightWallCorner",
+        "groundCenter",
+        "groundLeftCorner",
+        "groundCenter",
+        "groundCenter",
+        "rightWallCorner"
+      ]
+    },
+    "edges": {
+      "yOffset": -100,
+      "alpha": 0.32,
+      "superAlpha": 0.1,
+      "leftTile": "leftWallCorner",
+      "rightTile": "rightWallCorner"
+    },
+    "platforms": {
+      "alpha": 0.42,
+      "superAlpha": 0.12,
+      "pulse": 0.03,
+      "items": [
+        {
+          "x": 628,
+          "y": 280,
+          "width": 146,
+          "height": 64,
+          "tile": "floatingPlatformShort"
+        },
+        {
+          "x": 1430,
+          "y": 276,
+          "width": 154,
+          "height": 68,
+          "tile": "floatingPlatformVariant"
+        },
+        {
+          "x": 1905,
+          "y": 286,
+          "width": 148,
+          "height": 64,
+          "tile": "floatingPlatform"
+        }
+      ]
+    }
+  },
+  "overlays": {
+    "floorDark": {
+      "normal": "rgba(5, 4, 4, 0.32)",
+      "super": "rgba(5, 4, 4, 0.12)"
+    },
+    "groundLine": {
+      "normal": "rgba(241, 209, 146, 0.16)",
+      "super": "rgba(241, 209, 146, 0.08)"
+    }
+  }
+}

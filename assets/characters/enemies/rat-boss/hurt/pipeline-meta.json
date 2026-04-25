@@ -1,0 +1,180 @@
+{
+  "target": "creature",
+  "mode": "hurt",
+  "prompt": "",
+  "role": "",
+  "input": "assets/characters/enemies/rat-boss/hurt/raw-sheet.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 125,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 256,
+  "fit_scale": 0.9,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "largest",
+  "component_padding": 10,
+  "min_component_area": 1,
+  "edge_touch_margin": 3,
+  "frame_labels": [
+    "hurt-1",
+    "hurt-2",
+    "hurt-3",
+    "hurt-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 24,
+      "selected_component_area": 103633,
+      "selected_component_bbox": [
+        78,
+        154,
+        525,
+        536
+      ],
+      "crop_bbox": [
+        68,
+        144,
+        535,
+        546
+      ],
+      "edge_touch": false,
+      "output_size": [
+        196,
+        169
+      ],
+      "paste_position": [
+        30,
+        75
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 8,
+      "selected_component_area": 122509,
+      "selected_component_bbox": [
+        2,
+        129,
+        537,
+        544
+      ],
+      "crop_bbox": [
+        0,
+        119,
+        547,
+        554
+      ],
+      "edge_touch": true,
+      "output_size": [
+        230,
+        183
+      ],
+      "paste_position": [
+        13,
+        61
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 7,
+      "selected_component_area": 112068,
+      "selected_component_bbox": [
+        74,
+        81,
+        543,
+        482
+      ],
+      "crop_bbox": [
+        64,
+        71,
+        553,
+        492
+      ],
+      "edge_touch": false,
+      "output_size": [
+        205,
+        177
+      ],
+      "paste_position": [
+        25,
+        67
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 9,
+      "selected_component_area": 110141,
+      "selected_component_bbox": [
+        22,
+        75,
+        489,
+        482
+      ],
+      "crop_bbox": [
+        12,
+        65,
+        499,
+        492
+      ],
+      "edge_touch": false,
+      "output_size": [
+        205,
+        179
+      ],
+      "paste_position": [
+        25,
+        65
+      ]
+    }
+  ],
+  "edge_touch_frames": [
+    [
+      0,
+      1
+    ]
+  ]
+}

@@ -96,6 +96,78 @@
       "scale": 1.45,
       "anchorX": 96,
       "anchorY": 177
+    },
+    "cat_run": {
+      "src": "assets/characters/player/cat-form/cat_run/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 3,
+      "frames": 6,
+      "fps": 10,
+      "loop": true,
+      "scale": 2.08,
+      "anchorX": 64,
+      "anchorY": 112
+    },
+    "cat_eat": {
+      "src": "assets/characters/player/cat-form/cat_eat/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "scale": 1.75,
+      "anchorX": 64,
+      "anchorY": 112
+    },
+    "cat_pounce": {
+      "src": "assets/characters/player/cat-form/cat_pounce/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 3,
+      "frames": 6,
+      "fps": 9,
+      "loop": false,
+      "scale": 2.08,
+      "anchorX": 64,
+      "anchorY": 112
+    },
+    "cat_stunned": {
+      "src": "assets/characters/player/cat-form/cat_stunned/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "scale": 1.75,
+      "anchorX": 64,
+      "anchorY": 112
+    },
+    "cat_knockback": {
+      "src": "assets/characters/player/cat-form/cat_knockback/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 3,
+      "frames": 6,
+      "fps": 9,
+      "loop": false,
+      "scale": 2.08,
+      "anchorX": 64,
+      "anchorY": 112
+    },
+    "cat_recover": {
+      "src": "assets/characters/player/cat-form/cat_recover/sheet-transparent.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "cols": 2,
+      "frames": 4,
+      "fps": 7,
+      "loop": false,
+      "scale": 1.75,
+      "anchorX": 64,
+      "anchorY": 112
     }
   },
   "effects": {
@@ -151,6 +223,75 @@
       "frames": 4,
       "fps": 13,
       "scale": 0.92,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "cat_food_projectile": {
+      "src": "assets/effects/boss/rat-boss/cat_food_projectile/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 4,
+      "frames": 4,
+      "fps": 10,
+      "scale": 0.48,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "cat_food_on_ground": {
+      "src": "assets/effects/boss/rat-boss/cat_food_on_ground/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 4,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "scale": 0.48,
+      "anchorX": 96,
+      "anchorY": 145
+    },
+    "paper_ball_projectile": {
+      "src": "assets/effects/boss/rat-boss/paper_ball_projectile/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 4,
+      "frames": 4,
+      "fps": 12,
+      "scale": 0.42,
+      "anchorX": 96,
+      "anchorY": 96
+    },
+    "paper_ball_on_ground": {
+      "src": "assets/effects/boss/rat-boss/paper_ball_on_ground/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 4,
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "scale": 0.46,
+      "anchorX": 96,
+      "anchorY": 145
+    },
+    "hypnosis_fx": {
+      "src": "assets/effects/boss/rat-boss/hypnosis_fx/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 8,
+      "loop": true,
+      "scale": 0.86,
+      "anchorX": 96,
+      "anchorY": 142
+    },
+    "kick_impact_fx": {
+      "src": "assets/effects/boss/rat-boss/kick_impact_fx/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 16,
+      "scale": 0.9,
       "anchorX": 96,
       "anchorY": 96
     }
@@ -227,18 +368,127 @@
           "anchorY": 171
         }
       }
+    },
+    "ratBoss": {
+      "maxHealth": 8,
+      "speed": 72,
+      "bodyWidth": 178,
+      "bodyHeight": 172,
+      "bodyOffsetY": -92,
+      "animations": {
+        "idle": {
+          "src": "assets/characters/enemies/rat-boss/idle/sheet-transparent.png",
+          "frameWidth": 256,
+          "frameHeight": 256,
+          "cols": 2,
+          "frames": 4,
+          "fps": 5,
+          "loop": true,
+          "scale": 1,
+          "anchorX": 128,
+          "anchorY": 244
+        },
+        "intro": {
+          "src": "assets/characters/enemies/rat-boss/intro/sheet-transparent.png",
+          "frameWidth": 256,
+          "frameHeight": 256,
+          "cols": 3,
+          "frames": 6,
+          "fps": 7,
+          "loop": false,
+          "scale": 1,
+          "anchorX": 128,
+          "anchorY": 244
+        },
+        "attack_food": {
+          "src": "assets/characters/enemies/rat-boss/attack_food/sheet-transparent.png",
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "cols": 3,
+          "frames": 6,
+          "fps": 8,
+          "loop": false,
+          "scale": 1.16,
+          "anchorX": 160,
+          "anchorY": 285
+        },
+        "attack_paper": {
+          "src": "assets/characters/enemies/rat-boss/attack_paper/sheet-transparent.png",
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "cols": 3,
+          "frames": 6,
+          "fps": 9,
+          "loop": false,
+          "scale": 1.16,
+          "anchorX": 160,
+          "anchorY": 285
+        },
+        "kick": {
+          "src": "assets/characters/enemies/rat-boss/kick/sheet-transparent.png",
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "cols": 3,
+          "frames": 6,
+          "fps": 10,
+          "loop": false,
+          "scale": 1.16,
+          "anchorX": 160,
+          "anchorY": 285
+        },
+        "hurt": {
+          "src": "assets/characters/enemies/rat-boss/hurt/sheet-transparent.png",
+          "frameWidth": 256,
+          "frameHeight": 256,
+          "cols": 2,
+          "frames": 4,
+          "fps": 8,
+          "loop": false,
+          "scale": 1,
+          "anchorX": 128,
+          "anchorY": 244
+        },
+        "death": {
+          "src": "assets/characters/enemies/rat-boss/death/sheet-transparent.png",
+          "frameWidth": 256,
+          "frameHeight": 256,
+          "cols": 3,
+          "frames": 6,
+          "fps": 6,
+          "loop": false,
+          "scale": 1,
+          "anchorX": 128,
+          "anchorY": 244
+        }
+      }
     }
   },
   "level": {
-    "background": "assets/levels/backgrounds/rat_den_bg.png",
+    "width": 2400,
+    "map": "assets/data/levels/rat-den-01.json",
+    "background": "assets/levels/backgrounds/rat_den_bg_long.png",
     "tiles": {
       "groundCenter": "assets/levels/tilesets/rat_den_tileset_processed/tiles/01_ground_center.png",
+      "floatingPlatformShort": "assets/levels/tilesets/rat_den_tileset_processed/tiles/02_floating_platform_short.png",
+      "groundLeftCorner": "assets/levels/tilesets/rat_den_tileset_processed/tiles/03_ground_left_corner.png",
+      "groundRightCorner": "assets/levels/tilesets/rat_den_tileset_processed/tiles/04_ground_right_corner.png",
+      "leftWallCorner": "assets/levels/tilesets/rat_den_tileset_processed/tiles/05_left_wall_corner.png",
+      "rightWallCorner": "assets/levels/tilesets/rat_den_tileset_processed/tiles/06_right_wall_corner.png",
       "floatingPlatform": "assets/levels/tilesets/rat_den_tileset_processed/tiles/07_floating_platform_center.png",
-      "slimeWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/12_slime_wall.png"
+      "floatingPlatformVariant": "assets/levels/tilesets/rat_den_tileset_processed/tiles/08_floating_platform_variant.png",
+      "stoneWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/09_stone_wall.png",
+      "crackedWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/10_cracked_wall.png",
+      "dirtBoneFill": "assets/levels/tilesets/rat_den_tileset_processed/tiles/11_dirt_bone_fill.png",
+      "slimeWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/12_slime_wall.png",
+      "crystalWall": "assets/levels/tilesets/rat_den_tileset_processed/tiles/13_crystal_wall.png",
+      "boneSkullFill": "assets/levels/tilesets/rat_den_tileset_processed/tiles/14_bone_skull_fill.png",
+      "crystalRockFill": "assets/levels/tilesets/rat_den_tileset_processed/tiles/15_crystal_rock_fill.png",
+      "darkStoneFill": "assets/levels/tilesets/rat_den_tileset_processed/tiles/16_dark_stone_fill.png"
     }
   },
   "cutins": {
-    "super": "assets/characters/player/super/player_super_cutin.png"
+    "super": "assets/characters/player/super/player_super_cutin.png",
+    "boss": "assets/characters/enemies/rat-boss/cutin/boss_cutin.png"
   },
   "backgrounds": {
     "super": "assets/effects/player/super_background_plate/background.png"

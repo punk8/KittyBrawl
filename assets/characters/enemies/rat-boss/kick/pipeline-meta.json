@@ -1,0 +1,228 @@
+{
+  "target": "creature",
+  "mode": "kick",
+  "prompt": "",
+  "role": "",
+  "input": "assets/characters/enemies/rat-boss/kick/raw-sheet.png",
+  "threshold": 70,
+  "edge_threshold": 95,
+  "duration": 100,
+  "rows": 2,
+  "cols": 3,
+  "cell_size": 320,
+  "fit_scale": 0.78,
+  "trim_border": 8,
+  "edge_clean_depth": 3,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 6,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "kick-1",
+    "kick-2",
+    "kick-3",
+    "kick-4",
+    "kick-5",
+    "kick-6"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 2,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        64,
+        126,
+        418,
+        428
+      ],
+      "edge_touch": false,
+      "output_size": [
+        189,
+        161
+      ],
+      "paste_position": [
+        65,
+        124
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 3,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        30,
+        104,
+        496,
+        428
+      ],
+      "edge_touch": false,
+      "output_size": [
+        249,
+        173
+      ],
+      "paste_position": [
+        35,
+        112
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 2,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        0,
+        124,
+        407,
+        428
+      ],
+      "edge_touch": true,
+      "output_size": [
+        217,
+        162
+      ],
+      "paste_position": [
+        51,
+        123
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        29,
+        56,
+        496,
+        362
+      ],
+      "edge_touch": false,
+      "output_size": [
+        249,
+        163
+      ],
+      "paste_position": [
+        35,
+        122
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 2,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        71,
+        51,
+        496,
+        362
+      ],
+      "edge_touch": false,
+      "output_size": [
+        227,
+        166
+      ],
+      "paste_position": [
+        46,
+        119
+      ]
+    },
+    {
+      "grid": [
+        1,
+        2
+      ],
+      "source_box": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 2,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        0,
+        67,
+        330,
+        369
+      ],
+      "edge_touch": true,
+      "output_size": [
+        176,
+        161
+      ],
+      "paste_position": [
+        72,
+        124
+      ]
+    }
+  ],
+  "edge_touch_frames": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ]
+}

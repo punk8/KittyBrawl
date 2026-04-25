@@ -1,0 +1,224 @@
+{
+  "target": "creature",
+  "mode": "attack_food",
+  "prompt": "",
+  "role": "",
+  "input": "assets/characters/enemies/rat-boss/attack_food/raw-sheet.png",
+  "threshold": 70,
+  "edge_threshold": 95,
+  "duration": 125,
+  "rows": 2,
+  "cols": 3,
+  "cell_size": 320,
+  "fit_scale": 0.78,
+  "trim_border": 8,
+  "edge_clean_depth": 3,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 6,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "attack_food-1",
+    "attack_food-2",
+    "attack_food-3",
+    "attack_food-4",
+    "attack_food-5",
+    "attack_food-6"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 6,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        40,
+        172,
+        451,
+        422
+      ],
+      "edge_touch": false,
+      "output_size": [
+        213,
+        130
+      ],
+      "paste_position": [
+        53,
+        155
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 3,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        37,
+        91,
+        443,
+        417
+      ],
+      "edge_touch": false,
+      "output_size": [
+        211,
+        169
+      ],
+      "paste_position": [
+        54,
+        116
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 5,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        11,
+        107,
+        374,
+        420
+      ],
+      "edge_touch": false,
+      "output_size": [
+        188,
+        162
+      ],
+      "paste_position": [
+        66,
+        123
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 13,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        35,
+        90,
+        496,
+        354
+      ],
+      "edge_touch": false,
+      "output_size": [
+        239,
+        137
+      ],
+      "paste_position": [
+        40,
+        148
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 14,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        0,
+        41,
+        480,
+        365
+      ],
+      "edge_touch": true,
+      "output_size": [
+        249,
+        168
+      ],
+      "paste_position": [
+        35,
+        117
+      ]
+    },
+    {
+      "grid": [
+        1,
+        2
+      ],
+      "source_box": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 6,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        51,
+        70,
+        405,
+        366
+      ],
+      "edge_touch": false,
+      "output_size": [
+        184,
+        153
+      ],
+      "paste_position": [
+        68,
+        132
+      ]
+    }
+  ],
+  "edge_touch_frames": [
+    [
+      1,
+      1
+    ]
+  ]
+}

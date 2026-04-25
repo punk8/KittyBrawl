@@ -1,0 +1,4 @@
+interface:
+  display_name: "KittyBrawl Sprite Actions"
+  short_description: "Generate and clean action sheets"
+  default_prompt: "Use $kittybrawl-sprite-action-pipeline to create a KittyBrawl action sprite sheet."

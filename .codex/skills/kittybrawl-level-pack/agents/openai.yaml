@@ -1,0 +1,4 @@
+interface:
+  display_name: "KittyBrawl Level Pack"
+  short_description: "Build stages, backgrounds, tiles"
+  default_prompt: "Use $kittybrawl-level-pack to create or integrate KittyBrawl level assets."

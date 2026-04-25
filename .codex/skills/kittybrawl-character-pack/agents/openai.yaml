@@ -1,0 +1,4 @@
+interface:
+  display_name: "KittyBrawl Character Pack"
+  short_description: "Add players or enemies to demo"
+  default_prompt: "Use $kittybrawl-character-pack to add a new KittyBrawl character or enemy."

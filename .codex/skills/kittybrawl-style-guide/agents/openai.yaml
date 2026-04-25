@@ -1,0 +1,4 @@
+interface:
+  display_name: "KittyBrawl Style Guide"
+  short_description: "KittyBrawl pixel art direction"
+  default_prompt: "Use $kittybrawl-style-guide to keep a new KittyBrawl asset visually consistent."
