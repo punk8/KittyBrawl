@@ -114,6 +114,10 @@ async function loadImages(assetConfig) {
     entries.push([`background:${name}`, src]);
   }
 
+  for (const [name, src] of Object.entries(assetConfig.cutins)) {
+    entries.push([`cutin:${name}`, src]);
+  }
+
   entries.push(["level:background", assetConfig.level.background]);
 
   for (const [name, src] of Object.entries(assetConfig.level.tiles)) {
@@ -569,15 +573,20 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   ctx.imageSmoothingEnabled = false;
 
-  drawBackdrop();
-
-  if (player.action.startsWith("super_")) {
+  if (isSuperMode()) {
     drawSuperBackdrop();
+  } else {
+    drawBackdrop();
   }
 
-  drawStage();
+  drawStage(isSuperMode());
   drawCombatants();
   drawEffects();
+
+  if (player.action === "super_activation") {
+    drawSuperCutin();
+  }
+
   drawHud();
 }
 
@@ -596,17 +605,17 @@ function drawSuperBackdrop() {
   const image = images.get("background:super");
   const cover = coverRect(image.width, image.height, WIDTH, HEIGHT);
   ctx.save();
-  ctx.globalAlpha = player.action === "super_activation" ? 0.82 : 0.68;
+  ctx.globalAlpha = 1;
   ctx.drawImage(image, cover.sx, cover.sy, cover.sw, cover.sh, 0, 0, WIDTH, HEIGHT);
-  ctx.globalAlpha = player.action === "super_activation" ? 0.2 : 0.12;
-  ctx.fillStyle = "#f3d78a";
+  ctx.globalAlpha = player.action === "super_activation" ? 0.1 : 0.16;
+  ctx.fillStyle = "#08020e";
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
   ctx.restore();
 }
 
-function drawStage() {
+function drawStage(isSuperStage = false) {
   ctx.save();
-  ctx.globalAlpha = 0.82;
+  ctx.globalAlpha = isSuperStage ? 0.7 : 0.82;
   const ground = images.get("tile:groundCenter");
   const wall = images.get("tile:slimeWall");
   const platform = images.get("tile:floatingPlatform");
@@ -615,11 +624,11 @@ function drawStage() {
     ctx.drawImage(ground, x, GROUND_Y - 132, 150, 150);
   }
 
-  ctx.globalAlpha = 0.48;
+  ctx.globalAlpha = isSuperStage ? 0.36 : 0.48;
   ctx.drawImage(wall, -28, GROUND_Y - 130, 122, 122);
   ctx.drawImage(wall, WIDTH - 92, GROUND_Y - 130, 122, 122);
 
-  ctx.globalAlpha = 0.56 + Math.sin(stagePulse * 2) * 0.04;
+  ctx.globalAlpha = (isSuperStage ? 0.4 : 0.56) + Math.sin(stagePulse * 2) * 0.04;
   ctx.drawImage(platform, 664, 280, 136, 136);
   ctx.restore();
 
@@ -628,6 +637,50 @@ function drawStage() {
   ctx.fillRect(0, GROUND_Y + 8, WIDTH, HEIGHT - GROUND_Y);
   ctx.fillStyle = "rgba(241, 209, 146, 0.16)";
   ctx.fillRect(0, GROUND_Y - 1, WIDTH, 2);
+  ctx.restore();
+}
+
+function drawSuperCutin() {
+  const image = images.get("cutin:super");
+  const anim = config.animations.super_activation;
+  const duration = anim.frames / anim.fps;
+  const progress = clamp(player.actionTime / duration, 0, 1);
+  const enterEnd = 0.22;
+  const exitStart = 0.82;
+  let offsetX = 0;
+
+  if (progress < enterEnd) {
+    offsetX = -WIDTH * (1 - easeOutCubic(progress / enterEnd));
+  } else if (progress > exitStart) {
+    offsetX = WIDTH * easeInCubic((progress - exitStart) / (1 - exitStart));
+  }
+
+  const bannerHeight = 255;
+  const y = 58;
+  const cover = coverRect(image.width, image.height, WIDTH, bannerHeight);
+
+  ctx.save();
+  ctx.globalAlpha = 0.88;
+  ctx.fillStyle = "rgba(0, 0, 0, 0.72)";
+  ctx.fillRect(0, y - 12, WIDTH, bannerHeight + 24);
+
+  ctx.globalAlpha = 1;
+  ctx.drawImage(
+    image,
+    cover.sx,
+    cover.sy,
+    cover.sw,
+    cover.sh,
+    Math.round(offsetX),
+    y,
+    WIDTH,
+    bannerHeight
+  );
+
+  ctx.globalAlpha = 0.72;
+  ctx.fillStyle = "#f3d78a";
+  ctx.fillRect(0, y - 2, WIDTH, 2);
+  ctx.fillRect(0, y + bannerHeight, WIDTH, 2);
   ctx.restore();
 }
 
@@ -827,6 +880,20 @@ function coverRect(srcW, srcH, dstW, dstH) {
     sw: srcW,
     sh
   };
+}
+
+function isSuperMode() {
+  return player.action.startsWith("super_");
+}
+
+function easeOutCubic(value) {
+  const t = clamp(value, 0, 1);
+  return 1 - (1 - t) ** 3;
+}
+
+function easeInCubic(value) {
+  const t = clamp(value, 0, 1);
+  return t ** 3;
 }
 
 function rectsOverlap(a, b) {
