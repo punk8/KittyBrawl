@@ -30,6 +30,8 @@ const BOSS_JUMP_ARC_HEIGHT = 142;
 const BOSS_JUMP_MIN_DISTANCE = 160;
 const BOSS_JUMP_MAX_DISTANCE = 300;
 const BOSS_JUMP_MIN_TRAVEL = 120;
+const STAGE_CLEAR_PLATE_DELAY = 0.62;
+const STAGE_CLEAR_HINT_DELAY = 2.25;
 
 const canvas = document.querySelector("#game");
 const ctx = canvas.getContext("2d");
@@ -46,6 +48,11 @@ const encounter = {
   bossSpawned: false,
   bossDefeated: false,
   nextBossAttack: "food"
+};
+const stageClear = {
+  active: false,
+  time: 0,
+  sparkSpawned: false
 };
 
 const player = {
@@ -80,6 +87,7 @@ const lockedActions = new Set([
   "attack_01",
   "hurt",
   "death",
+  "victory_pose",
   "super_activation",
   "super_attack"
 ]);
@@ -139,6 +147,7 @@ window.__kittyDebug = {
       facing: enemy.facing
     })),
     bossCutin,
+    stageClear: { ...stageClear },
     encounter: { ...encounter },
     effects: transientEffects.map((effect) => effect.name)
   })
@@ -178,6 +187,10 @@ async function loadImages(assetConfig) {
 
   for (const [name, src] of Object.entries(assetConfig.cutins)) {
     entries.push([`cutin:${name}`, src]);
+  }
+
+  for (const [name, src] of Object.entries(assetConfig.ui ?? {})) {
+    entries.push([`ui:${name}`, src]);
   }
 
   entries.push(["level:background", assetConfig.level.background]);
@@ -223,6 +236,12 @@ function update(dt) {
   stagePulse += dt;
   player.invulnerableTime = Math.max(0, player.invulnerableTime - dt);
   updateBossCutin(dt);
+  if (updateStageClear(dt)) {
+    updatePlayerAction(dt);
+    updateEffects(dt);
+    updateCamera();
+    return;
+  }
   if (!updatePlayerStatus(dt)) {
     updateMovement(dt);
   }
@@ -231,6 +250,27 @@ function update(dt) {
   updateEncounter();
   updateEffects(dt);
   updateCamera();
+}
+
+function updateStageClear(dt) {
+  if (!stageClear.active) {
+    return false;
+  }
+
+  stageClear.time += dt;
+  player.vx = 0;
+  player.vy = 0;
+  player.y = GROUND_Y;
+  player.grounded = true;
+  player.facing = 1;
+  ensurePlayerAction("victory_pose");
+
+  if (!stageClear.sparkSpawned && stageClear.time >= 0.28) {
+    stageClear.sparkSpawned = true;
+    spawnEffect("victory_spark_fx", player.x + 8, player.y - 116, 1, { life: 3.2, loop: true });
+  }
+
+  return true;
 }
 
 function updateBossCutin(dt) {
@@ -480,6 +520,11 @@ function updatePlayerAction(dt) {
     return;
   }
 
+  if (player.action === "victory_pose") {
+    player.actionTime = (anim.frames - 1) / anim.fps;
+    return;
+  }
+
   if (player.action.startsWith("cat_")) {
     player.actionTime = Math.min(player.actionTime, (anim.frames - 1) / anim.fps);
     return;
@@ -585,6 +630,7 @@ function updateBoss(boss, dt) {
     encounter.bossDefeated = true;
     bossCutin = null;
     if (Math.floor(boss.actionTime * anim.fps) >= anim.frames) {
+      triggerStageClear();
       boss.remove = true;
     }
     return;
@@ -851,7 +897,7 @@ function isPlayerBossControlled() {
 }
 
 function isPlayerAttackDisabled() {
-  return player.status !== "normal";
+  return stageClear.active || player.status !== "normal";
 }
 
 function isPlayerActionLocked() {
@@ -875,7 +921,7 @@ function setEnemyAction(enemy, name) {
 }
 
 function jump() {
-  if (isPlayerBossControlled() || isPlayerActionLocked() || !player.grounded) {
+  if (stageClear.active || isPlayerBossControlled() || isPlayerActionLocked() || !player.grounded) {
     return;
   }
 
@@ -885,6 +931,10 @@ function jump() {
 }
 
 function triggerAction(name) {
+  if (stageClear.active) {
+    return;
+  }
+
   if (player.action === "death" && name !== "idle") {
     return;
   }
@@ -913,7 +963,7 @@ function triggerAction(name) {
 }
 
 function triggerDebugCatStatus(index) {
-  if (player.action === "death") {
+  if (stageClear.active || player.action === "death") {
     return;
   }
 
@@ -977,6 +1027,7 @@ function resetEncounter() {
   clearPlayerStatus();
   camera.x = 0;
   bossCutin = null;
+  resetStageClear();
   encounter.bossSpawned = false;
   encounter.bossDefeated = false;
   encounter.nextBossAttack = "food";
@@ -987,8 +1038,49 @@ function resetEncounter() {
   spawnRat("rat-b", 1420);
 }
 
+function resetStageClear() {
+  stageClear.active = false;
+  stageClear.time = 0;
+  stageClear.sparkSpawned = false;
+}
+
+function triggerStageClear() {
+  if (stageClear.active || player.action === "death") {
+    return;
+  }
+
+  stageClear.active = true;
+  stageClear.time = 0;
+  stageClear.sparkSpawned = false;
+  bossCutin = null;
+  clearPlayerStatus();
+  clearBossControlEffects();
+  player.vx = 0;
+  player.vy = 0;
+  player.y = GROUND_Y;
+  player.grounded = true;
+  player.facing = 1;
+  setPlayerAction("victory_pose");
+}
+
+function clearBossControlEffects() {
+  const names = new Set([
+    "cat_food_projectile",
+    "cat_food_on_ground",
+    "paper_ball_projectile",
+    "paper_ball_on_ground",
+    "hypnosis_fx"
+  ]);
+
+  for (let index = transientEffects.length - 1; index >= 0; index -= 1) {
+    if (names.has(transientEffects[index].name)) {
+      transientEffects.splice(index, 1);
+    }
+  }
+}
+
 function updateEncounter() {
-  if (encounter.bossSpawned || encounter.bossDefeated) {
+  if (stageClear.active || encounter.bossSpawned || encounter.bossDefeated) {
     return;
   }
 
@@ -1438,6 +1530,10 @@ function draw() {
   }
 
   drawHud();
+
+  if (stageClear.active) {
+    drawStageClearOverlay();
+  }
 }
 
 function drawBackdrop() {
@@ -1746,6 +1842,49 @@ function drawBossCutin() {
   ctx.fillStyle = bossCutin.attack === "food" ? "#e6ba61" : "#b58cff";
   ctx.fillRect(0, y - 2, WIDTH, 2);
   ctx.fillRect(0, y + bannerHeight, WIDTH, 2);
+  ctx.restore();
+}
+
+function drawStageClearOverlay() {
+  const progress = clamp(stageClear.time / 0.55, 0, 1);
+  const eased = easeOutCubic(progress);
+  const plate = images.get("ui:stageClearPlate");
+  const plateWidth = 760;
+  const plateHeight = 190;
+  const x = (WIDTH - plateWidth) * 0.5;
+  const y = 68 + (1 - eased) * 18;
+  const titleAlpha = clamp((stageClear.time - STAGE_CLEAR_PLATE_DELAY) / 0.4, 0, 1);
+  const hintAlpha = clamp((stageClear.time - STAGE_CLEAR_HINT_DELAY) / 0.45, 0, 1);
+
+  ctx.save();
+  ctx.globalAlpha = 0.42 * eased;
+  ctx.fillStyle = "#050307";
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+  ctx.globalAlpha = eased;
+  ctx.drawImage(plate, Math.round(x), Math.round(y), plateWidth, plateHeight);
+
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.shadowColor = "#08020e";
+  ctx.shadowBlur = 0;
+  ctx.shadowOffsetX = 3;
+  ctx.shadowOffsetY = 3;
+
+  ctx.globalAlpha = titleAlpha;
+  ctx.font = "42px ui-monospace, SFMono-Regular, Menlo, monospace";
+  ctx.fillStyle = "#f6e6aa";
+  ctx.fillText("STAGE CLEAR", WIDTH * 0.5, y + 86);
+  ctx.fillStyle = "#a984ff";
+  ctx.font = "16px ui-monospace, SFMono-Regular, Menlo, monospace";
+  ctx.fillText("RAT DEN CLEARED", WIDTH * 0.5, y + 126);
+
+  ctx.globalAlpha = hintAlpha;
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.font = "13px ui-monospace, SFMono-Regular, Menlo, monospace";
+  ctx.fillStyle = "#f4efe5";
+  ctx.fillText("PRESS R TO REPLAY", WIDTH * 0.5, HEIGHT - 54);
   ctx.restore();
 }
 

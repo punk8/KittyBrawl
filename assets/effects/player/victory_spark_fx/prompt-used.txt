@@ -1,0 +1,12 @@
+Create a 2D pixel-art sprite sheet for a game effect.
+
+Asset: KittyBrawl player victory_spark_fx
+Sheet layout: exactly 2 columns x 2 rows, 4 frames total, equal-size cells, generous padding in every cell.
+View: side-view action platformer effect overlay.
+Background: perfectly flat solid #FF00FF chroma-key background across the entire sheet; no shadows, no gradients, no texture, no floor plane. Do not use #FF00FF in the effect.
+
+Effect description: small arcade victory spark / golden pixel glints with subtle purple magical wisps, celebratory but dark-fantasy, designed to appear around a robed cat warrior after defeating a boss. Each frame should show a short progression: 1) tiny golden glints appear, 2) brighter starburst with purple wisps, 3) spark cluster opens outward, 4) fading small glints. Keep it lightweight, not a full explosion.
+
+Style: 90s arcade pixel art, SNES / Sega Genesis side-scrolling action game, crisp hard pixel edges, high-contrast pixel clusters, no painterly blur, no vector look, no 3D render.
+
+Constraints: no characters, no text, no logos, no UI, no giant explosion, no smoke cloud covering the whole cell, nothing touches or crosses cell edges, consistent pixel scale across all frames.

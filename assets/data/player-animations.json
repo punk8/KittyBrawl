@@ -168,6 +168,18 @@
       "scale": 1.75,
       "anchorX": 64,
       "anchorY": 112
+    },
+    "victory_pose": {
+      "src": "assets/characters/player/presentation/victory_pose/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 3,
+      "frames": 6,
+      "fps": 7,
+      "loop": false,
+      "scale": 1.45,
+      "anchorX": 96,
+      "anchorY": 166
     }
   },
   "effects": {
@@ -294,6 +306,18 @@
       "scale": 0.9,
       "anchorX": 96,
       "anchorY": 96
+    },
+    "victory_spark_fx": {
+      "src": "assets/effects/player/victory_spark_fx/sheet-transparent.png",
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "cols": 2,
+      "frames": 4,
+      "fps": 10,
+      "loop": true,
+      "scale": 1,
+      "anchorX": 96,
+      "anchorY": 112
     }
   },
   "enemies": {
@@ -489,6 +513,9 @@
   "cutins": {
     "super": "assets/characters/player/super/player_super_cutin.png",
     "boss": "assets/characters/enemies/rat-boss/cutin/boss_cutin.png"
+  },
+  "ui": {
+    "stageClearPlate": "assets/effects/ui/stage_clear_plate/stage_clear_plate.png"
   },
   "backgrounds": {
     "super": "assets/effects/player/super_background_plate/background.png"
